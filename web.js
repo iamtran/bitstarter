@@ -2,8 +2,12 @@ var express = require('express');
 var app = express();
 app.use(express.logger());
 
+str = "Hello MCAT Buffer";
+buf1 = new Buffer(str.length);
+
 app.get('/', function(request, response) {
-  response.send('Hello MCAT! I CAN DO IT');
+  response.send(buf1.toString);
+  //response.send('Hello MCAT! I CAN DO IT');
 });
 
 var port = process.env.PORT || 5000;
