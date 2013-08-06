@@ -6,7 +6,7 @@ str = "Hello MCAT Buffer";
 buf1 = new Buffer(str.length);
 
 app.get('/', function(request, response) {
-  response.send(buf1.toString("utf8", 0, buffer.length));
+  response.send(buf1.toString("utf8", 0, buf1.length));
   //response.send('Hello MCAT! I CAN DO IT');
 });
 
